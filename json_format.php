@@ -1,6 +1,7 @@
 <?php
 
 function json_compact($node, $MAX_LINE) {
+  if ($node === null) { return array("null", 4); }
   if (!is_array($node) && !($node instanceof stdClass)) {
     // scalar
     $ret = gettype($node) == 'string' ? "\"$node\"" : $node;
