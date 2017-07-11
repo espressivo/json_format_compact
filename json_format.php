@@ -77,5 +77,5 @@ function my_json_encode($node, $indent=0) {
 }
 
 function json_format_compact($jsonstr, $MAX_LINE=80) {
-  return my_json_encode(json_compact(decode_json($jsonstr), $MAX_LINE)[0]);
+  return my_json_encode(json_compact(json_decode($jsonstr), $MAX_LINE)[0]);
 }
