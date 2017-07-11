@@ -76,8 +76,6 @@ function my_json_encode($node, $indent=0) {
   return $ret . "\n$tab]";
 }
 
-function encode_json_compact($obj, $MAX_LINE=80) {
-  var_dump($obj);
-  $comp = json_compact($obj, $MAX_LINE)[0];
-  print my_json_encode($comp);
+function json_format_compact($jsonstr, $MAX_LINE=80) {
+  return my_json_encode(json_compact(decode_json($jsonstr), $MAX_LINE)[0]);
 }
