@@ -31,8 +31,7 @@ for line in sys.stdin:
           if inline: tmp[-1] += (' '*pad).join([lBrace(c), inline, c])
           else: tmp[-1] += lBrace(c) + c
         else:
-          stack[-1].append(tmp[-1] + lBrace(c) + '\n' + ',\n'.join('  '*len(stack)+x for x in arr))
-          tmp[-1] = c
+          tmp[-1] = tmp[-1] + lBrace(c) + '\n' + ',\n'.join('  '*len(stack)+x for x in arr) + "\n" + '  '*(len(stack)-1) + c
       else:
         if c == '"': inStr = True
         tmp[-1] += c + ' '*(c == ':')
