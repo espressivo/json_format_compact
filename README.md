@@ -7,6 +7,7 @@ https://www.json.org/json-ja.html
 その便利さから、多くのプログラミング言語においてインデントや改行などを整形して出力できるライブラリが存在するが、  
 例えば `{ "a": [1], "b": [2, 3] }` のような、1行で表現できる簡単なJSONオブジェクトに対しても、
 ```
+$ python -c 'import json; print(json.dumps(json.loads("{ \"a\": [1], \"b\": [2, 3] }"), sort_keys=True, indent=4))'
 {
     "a": [
         1
