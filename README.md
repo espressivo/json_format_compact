@@ -3,6 +3,7 @@ json compact formatter
 
 # 概要
 JSON(JavaScript Object Notation)は、データをJavaScriptのオブジェクトの表記のように記述できる言語である。  
+https://www.json.org/json-ja.html  
 その便利さから、多くのプログラミング言語においてインデントや改行などを整形して出力できるライブラリが存在するが、  
 例えば `{ "a": [1], "b": [2, 3] }` のような、1行で表現できる簡単なJSONオブジェクトに対しても、
 ```
