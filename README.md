@@ -1,4 +1,4 @@
-# json_format_compact
+https://github.com/espressivo/json_format_compact# json_format_compact
 json compact formatter
 
 # 概要
@@ -57,4 +57,14 @@ $ python json_format.py 50 < sample.json
     "innnerKey": [234, 100, 100, 33, 2, 3, 4, 5, 6, 1]
   }
 }
+
+$ python json_format.py 100 < sample.json
+{
+  "name": "  espre\"ssivo\"",
+  "attribute": [1, "high", 10],
+  "key": { "innnerKey": [234, 100, 100, 33, 2, 3, 4, 5, 6, 1] }
+}
+
+$ python json_format.py 300 < sample.json
+{ "name": "  espre\"ssivo\"", "attribute": [1, "high", 10], "key": { "innnerKey": [234, 100, 100, 33, 2, 3, 4, 5, 6, 1] } }
 ```
